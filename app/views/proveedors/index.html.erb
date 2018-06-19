@@ -1,0 +1,74 @@
+<p id="notice"><%= notice %></p>
+  <div class="row">
+  
+    <div class="col-11">
+    <% if !user_signed_in? %>
+  	<p class="sign_in"><%= link_to "Acceder aqui", new_user_session_path %></p>
+    <% end %>
+    </div>
+    
+    <div class="col-1">
+    <% if user_signed_in? %>
+        <button class="btn btn-dark"><%= link_to "Salir", destroy_user_session_path, :method => :delete %></button>
+    <% end %>
+    </div>
+    
+  </div>
+  
+
+
+
+  <h1>Proveedores</h1>
+  <div class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Razon social</th>
+        <th>Direccion</th>
+        <th>Distrito</th>
+        <th>Provincia</th>
+        <th>Departamento</th>
+        <th>Telefono</th>
+        <th>Cel1</th>
+        <th>Cel2</th>
+        <th>Correo</th>
+        <th>Tipo</th>
+        <th>Lat</th>
+        <th>Lon</th>
+        <th>Url</th>
+        <th>H Inicio</th>
+        <th>H Fin</th>
+        <th>Foto</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @proveedors.each do |proveedor| %>
+        <tr>
+          <td><%= proveedor.razon_social %></td>
+          <td><%= proveedor.direccion %></td>
+          <td><%= proveedor.distrito %></td>
+          <td><%= proveedor.provincia %></td>
+          <td><%= proveedor.departamento %></td>
+          <td><%= proveedor.telefono %></td>
+          <td><%= proveedor.celular1 %></td>
+          <td><%= proveedor.celular2 %></td>
+          <td><%= proveedor.correo %></td>
+          <td><%= proveedor.tipo_servicio %></td>
+          <td><%= proveedor.latitud %></td>
+          <td><%= proveedor.longitud %></td>
+          <td><%= proveedor.url %></td>
+          <td><%= proveedor.hora_inicio %></td>
+          <td><%= proveedor.hora_fin %></td>
+          <td><%= proveedor.foto_local %></td>
+          <td><%= link_to 'Show', proveedor, class: "btn btn-primary"  %></td>
+          <td><%= link_to 'Edit', edit_proveedor_path(proveedor) , class: "btn btn-info" %></td>
+          <td><%= link_to 'Destroy', proveedor, method: :delete, data: { confirm: 'Estas seguro?' } , class: "btn btn-danger" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  </div> 
+  <br>
+  <%= link_to 'New Proveedor', new_proveedor_path , class: "btn btn-success"%>

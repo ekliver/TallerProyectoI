@@ -1,0 +1,97 @@
+<%= form_with(model: proveedor, local: true) do |form| %>
+  <% if proveedor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(proveedor.errors.count, "error") %> prohibited this proveedor from being saved:</h2>
+
+      <ul>
+      <% proveedor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :razon_social %>
+    <%= form.text_field :razon_social %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distrito %>
+    <%= form.text_field :distrito %>
+  </div>
+
+  <div class="field">
+    <%= form.label :provincia %>
+    <%= form.text_field :provincia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :departamento %>
+    <%= form.text_field :departamento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono %>
+    <%= form.text_field :telefono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :celular1 %>
+    <%= form.text_field :celular1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :celular2 %>
+    <%= form.text_field :celular2 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correo %>
+    <%= form.text_field :correo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_servicio %>
+    <%= form.text_field :tipo_servicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitud %>
+    <%= form.text_field :latitud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitud %>
+    <%= form.text_field :longitud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora_inicio %>
+    <%= form.text_field :hora_inicio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora_fin %>
+    <%= form.text_field :hora_fin %>
+  </div>
+
+  <div class="field">
+    <%= form.label :foto_local %>
+    <%= form.text_field :foto_local %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
