@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_19_002757) do
+ActiveRecord::Schema.define(version: 2018_06_25_043319) do
 
   create_table "proveedors", force: :cascade do |t|
     t.string "razon_social"
@@ -46,6 +46,13 @@ ActiveRecord::Schema.define(version: 2018_06_19_002757) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "idUsuario"
+    t.string "logiUsuario"
+    t.string "nomUsuario"
+    t.string "apeUsuario"
+    t.string "numDni"
+    t.string "numCelular"
+    t.string "imgUsuario"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
