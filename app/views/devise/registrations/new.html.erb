@@ -9,35 +9,38 @@
   </div>
   
   <div class="field">
-    <%= f.label :logiUsuario %><br />
+    <%= f.label :logiUsuario, "LogiUsuario" %>
     <%= f.text_field :logiUsuario, autofocus: true, class:"form-control" %>
   </div>
-  
+  <br> 
   <div class="field">
-    <%= f.label :nomUsuario %><br />
+    <%= f.label :nomUsuario, "Nombre" %>
     <%= f.text_field :nomUsuario, autofocus: true, class:"form-control" %>
   </div>
+  <br>
   <div class="field">
-    <%= f.label :apeUsuario %><br />
+    <%= f.label :apeUsuario, "Apellidos" %>
     <%= f.text_field :apeUsuario, autofocus: true, class:"form-control" %>
   </div>
+  <br>
   <div class="field">
-    <%= f.label :numDni %><br />
+    <%= f.label :numDni, "Número de DNI" %>
     <%= f.text_field :numDni, autofocus: true, class:"form-control" %>
   </div>
+  <br>
   <div class="field">
-    <%= f.label :numCelular %><br />
+    <%= f.label :numCelular, "Celular" %>
     <%= f.text_field :numCelular, autofocus: true, class:"form-control" %>
   </div>
   <div class="field">
-    <%= f.hidden_field :imgUsuario, class:"form-control" %><br />
+    <%= f.hidden_field :imgUsuario, class:"form-control" %>
   </div>
-  
+  <br>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email %>
     <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"form-control" %>
   </div>
-
+  <br>
   <div class="field">
     <%= f.label :password , "Password" %>
     <% if @minimum_password_length %>
@@ -45,14 +48,14 @@
     <% end %><br />
     <%= f.password_field :password, autocomplete: "off", class:"form-control" %>
   </div>
-
+  <br>
   <div class="field">
     <%= f.label :password_confirmation, "Confirmar password" %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off", class:"form-control" %>
   </div>
-
+  <br>
   <div class="actions">
-    <%= f.submit "Sign up" , class: "btn btn-primary"  %>
+    <%= f.submit "Registrese" , class: "btn btn-primary"  %>
   </div>
 <% end %>
 
