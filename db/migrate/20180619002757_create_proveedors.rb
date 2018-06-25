@@ -1,4 +1,4 @@
-class CreateProveedors < ActiveRecord::Migration[5.2]
+class CreateProveedors < ActiveRecord::Migration[4.2]
   def change
     create_table :proveedors do |t|
       t.string :razon_social
