@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 gem 'rails'
-gem 'sqlite3'
+# gem 'sqlite3'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
@@ -13,7 +13,7 @@ gem 'sdoc'
 gem 'devise'
 gem 'bootstrap'
 gem 'jquery-rails'
-
+gem 'mysql2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

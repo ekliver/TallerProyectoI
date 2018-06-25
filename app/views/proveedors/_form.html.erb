@@ -23,17 +23,18 @@
 
   <div class="field">
     <%= form.label :distrito %>
-    <%= form.text_field :distrito , class:"form-control"  %>
+    <%= form.select(:distrito, ['Lince','Surco','San Borja','San Isidro','San Miguel','Magdalena del Mar'], {}, class:"form-control") %>
   </div>
+
 
   <div class="field">
     <%= form.label :provincia %>
-    <%= form.text_field :provincia, class:"form-control" %>
+    <%= form.select(:provincia, ['Lima'], {}, class:"form-control") %>
   </div>
 
   <div class="field">
     <%= form.label :departamento %>
-    <%= form.text_field :departamento , class:"form-control"  %>
+    <%= form.select(:departamento, ['Lima'], {}, class:"form-control") %>
   </div>
 
   <div class="field">
@@ -58,7 +59,7 @@
 
   <div class="field">
     <%= form.label :tipo_servicio %>
-    <%= form.text_field :tipo_servicio , class:"form-control"  %>
+    <%= form.select(:provincia, ['Servicio 1','Servicio 2','Servicio 3','Servicio 4'], {}, class:"form-control") %>
   </div>
 
   <div class="field">

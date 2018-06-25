@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2018_06_25_043319) do
 
-  create_table "proveedors", force: :cascade do |t|
+  create_table "proveedors", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "razon_social"
     t.string "direccion"
     t.string "distrito"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2018_06_25_043319) do
     t.datetime "updated_at"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
