@@ -9,9 +9,4 @@ class Api::V1::ProveedorsController < ApplicationController
         render json: {status: 'Exitoso', message: 'Proveedor encontrado', data: proveedor}, status: :ok
     end
     
-    private
-    
-    def sede_params
-        params.permit(:razon_social, :direccion, :latitud, :longitud)
-    end
 end

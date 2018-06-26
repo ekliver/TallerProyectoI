@@ -1,3 +1,5 @@
+
+
 <%= form_with(model: proveedor, local: true) do |form| %>
   <% if proveedor.errors.any? %>
     <div id="error_explanation">
@@ -23,18 +25,18 @@
 
   <div class="field">
     <%= form.label :distrito %>
-    <%= form.select(:distrito, ['Lince','Surco','San Borja','San Isidro','San Miguel','Magdalena del Mar'], {}, class:"form-control") %>
+    <%= form.select(:distrito, ["Lince",'Surco','San Borja','San Isidro','San Miguel','Magdalena del Mar'], {}, class:"form-control") %>
   </div>
 
 
   <div class="field">
     <%= form.label :provincia %>
-    <%= form.select(:provincia, ['Lima'], {}, class:"form-control") %>
+    <%= form.select(:provincia, ['Lima','Huaura','Oyon'], {}, class:"form-control") %>
   </div>
 
   <div class="field">
     <%= form.label :departamento %>
-    <%= form.select(:departamento, ['Lima'], {}, class:"form-control") %>
+    <%= form.select(:departamento, ['Lima','Trujillo','Arequipa'], {}, class:"form-control") %>
   </div>
 
   <div class="field">
@@ -59,19 +61,21 @@
 
   <div class="field">
     <%= form.label :tipo_servicio %>
-    <%= form.select(:provincia, ['Servicio 1','Servicio 2','Servicio 3','Servicio 4'], {}, class:"form-control") %>
+    <%= form.select(:tipo_servicio, ['Mecanico','Grifo','Llantero','Servicios de autos','Servicios de autos', 'Gruas'], {}, class:"form-control") %>
   </div>
 
   <div class="field">
     <%= form.label :latitud %>
-    <%= form.text_field :latitud , class:"form-control"  %>
+    <%= form.text_field :latitud , class:"form-control" , :id => 'latitud' %>
   </div>
 
   <div class="field">
     <%= form.label :longitud %>
-    <%= form.text_field :longitud , class:"form-control"  %>
+    <%= form.text_field :longitud , class:"form-control" , :id => 'longitud' %>
   </div>
-
+  <br> 
+  <div id="map"></div>
+  <br>
   <div class="field">
     <%= form.label :url %>
     <%= form.text_field :url , class:"form-control"  %>
