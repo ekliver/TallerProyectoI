@@ -10,9 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_25_043319) do
+ActiveRecord::Schema.define(version: 2018_07_10_054125) do
 
-  create_table "proveedors", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "beneficios", force: :cascade do |t|
+    t.string "nomBeneficio"
+    t.string "imgBeneficio"
+    t.float "puntBeneficio"
+    t.integer "porcDescuento"
+    t.boolean "inFavorito"
+    t.integer "idFavorito"
+    t.integer "idEje"
+    t.string "nomEje"
+    t.string "iconEje"
+    t.string "iconSEje"
+    t.integer "idLocal"
+    t.string "inAbierto"
+    t.float "numLongitud"
+    t.float "numLatitud"
+    t.float "numDistancia"
+    t.string "nomDistrito"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "proveedors", force: :cascade do |t|
     t.string "razon_social"
     t.string "direccion"
     t.string "distrito"
@@ -31,9 +52,11 @@ ActiveRecord::Schema.define(version: 2018_06_25_043319) do
     t.string "foto_local"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_proveedors_on_user_id"
   end
 
-  create_table "users", id: :integer, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"

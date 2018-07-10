@@ -1,6 +1,10 @@
 class ProveedorsController < ApplicationController
+  
   before_action :set_proveedor, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!, except: [:index, :show]
+  
+  
+  
   # GET /proveedors
   # GET /proveedors.json
   def index
@@ -14,7 +18,7 @@ class ProveedorsController < ApplicationController
 
   # GET /proveedors/new
   def new
-    @proveedor = Proveedor.new
+    @proveedor = current_user.proveedors.build
   end
 
   # GET /proveedors/1/edit
@@ -24,7 +28,7 @@ class ProveedorsController < ApplicationController
   # POST /proveedors
   # POST /proveedors.json
   def create
-    @proveedor = Proveedor.new(proveedor_params)
+    @proveedor = current_user.proveedors.build(proveedor_params)
 
     respond_to do |format|
       if @proveedor.save
@@ -61,6 +65,8 @@ class ProveedorsController < ApplicationController
     end
   end
 
+  
+  
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_proveedor
@@ -71,4 +77,5 @@ class ProveedorsController < ApplicationController
     def proveedor_params
       params.require(:proveedor).permit(:razon_social, :direccion, :distrito, :provincia, :departamento, :telefono, :celular1, :celular2, :correo, :tipo_servicio, :latitud, :longitud, :url, :hora_inicio, :hora_fin, :foto_local)
     end
+  
 end

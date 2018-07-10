@@ -1,0 +1,97 @@
+<%= form_with(model: beneficio, local: true) do |form| %>
+  <% if beneficio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(beneficio.errors.count, "error") %> prohibited this beneficio from being saved:</h2>
+
+      <ul>
+      <% beneficio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nomBeneficio %>
+    <%= form.text_field :nomBeneficio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :imgBeneficio %>
+    <%= form.text_field :imgBeneficio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :puntBeneficio %>
+    <%= form.text_field :puntBeneficio %>
+  </div>
+
+  <div class="field">
+    <%= form.label :porcDescuento %>
+    <%= form.number_field :porcDescuento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inFavorito %>
+    <%= form.check_box :inFavorito %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idFavorito %>
+    <%= form.number_field :idFavorito %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idEje %>
+    <%= form.number_field :idEje %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nomEje %>
+    <%= form.text_field :nomEje %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iconEje %>
+    <%= form.text_field :iconEje %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iconSEje %>
+    <%= form.text_field :iconSEje %>
+  </div>
+
+  <div class="field">
+    <%= form.label :idLocal %>
+    <%= form.number_field :idLocal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inAbierto %>
+    <%= form.text_field :inAbierto %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numLongitud %>
+    <%= form.text_field :numLongitud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numLatitud %>
+    <%= form.text_field :numLatitud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numDistancia %>
+    <%= form.text_field :numDistancia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nomDistrito %>
+    <%= form.text_field :nomDistrito %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
