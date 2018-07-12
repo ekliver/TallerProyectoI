@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :empresas
+  resources :ejes
   resources :beneficios
   resources :proveedors
   devise_for :users
@@ -10,6 +12,8 @@ Rails.application.routes.draw do
       resources :users
       resources :proveedors
       resources :beneficios
+      resources :ejes
+      resources :empresas
     end
   end
   

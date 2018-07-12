@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Empresas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nomempresa</th>
+      <th>Desempresa</th>
+      <th>Urllogo</th>
+      <th>Numsoporte</th>
+      <th>Nomskype</th>
+      <th>Inclave</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @empresas.each do |empresa| %>
+      <tr>
+        <td><%= empresa.nomEmpresa %></td>
+        <td><%= empresa.desEmpresa %></td>
+        <td><%= empresa.urlLogo %></td>
+        <td><%= empresa.numSoporte %></td>
+        <td><%= empresa.nomSkype %></td>
+        <td><%= empresa.inClave %></td>
+        <td><%= link_to 'Show', empresa %></td>
+        <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
+        <td><%= link_to 'Destroy', empresa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Empresa', new_empresa_path %>

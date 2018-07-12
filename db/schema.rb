@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_10_054125) do
+ActiveRecord::Schema.define(version: 2018_07_11_050356) do
 
   create_table "beneficios", force: :cascade do |t|
     t.string "nomBeneficio"
@@ -29,6 +29,25 @@ ActiveRecord::Schema.define(version: 2018_07_10_054125) do
     t.float "numLatitud"
     t.float "numDistancia"
     t.string "nomDistrito"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "ejes", force: :cascade do |t|
+    t.string "nomEje"
+    t.string "imgEje"
+    t.string "iconEje"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "empresas", force: :cascade do |t|
+    t.string "nomEmpresa"
+    t.string "desEmpresa"
+    t.string "urlLogo"
+    t.string "numSoporte"
+    t.string "nomSkype"
+    t.string "inClave"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
