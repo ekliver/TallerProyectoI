@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_07_11_050356) do
+ActiveRecord::Schema.define(version: 2018_07_13_033811) do
 
   create_table "beneficios", force: :cascade do |t|
     t.string "nomBeneficio"
@@ -52,6 +52,25 @@ ActiveRecord::Schema.define(version: 2018_07_11_050356) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "imagens", force: :cascade do |t|
+    t.string "urlImagen"
+    t.string "urlImagenPrevia"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "locals", force: :cascade do |t|
+    t.string "nomLocal"
+    t.string "numLatitud"
+    t.string "numLongitud"
+    t.string "dirLocal"
+    t.string "nomDistrito"
+    t.string "numTelefono"
+    t.string "inAbierto"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "proveedors", force: :cascade do |t|
     t.string "razon_social"
     t.string "direccion"
@@ -73,6 +92,13 @@ ActiveRecord::Schema.define(version: 2018_07_11_050356) do
     t.datetime "updated_at"
     t.integer "user_id"
     t.index ["user_id"], name: "index_proveedors_on_user_id"
+  end
+
+  create_table "servicios", force: :cascade do |t|
+    t.string "nomServicio"
+    t.string "inActivo"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

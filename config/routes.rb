@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  resources :imagens
+  resources :locals
+  resources :servicios
   resources :empresas
   resources :ejes
   resources :beneficios

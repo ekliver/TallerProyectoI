@@ -1,5 +1,7 @@
+<%= render 'layouts/navbar' %>
+<br> 
 <h2><i class="fas fa-user-edit"></i> Editar <%= resource_name.to_s.humanize %></h2>
-
+<br>
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
   <%= devise_error_messages! %>
 

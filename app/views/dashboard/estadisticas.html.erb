@@ -1,34 +1,29 @@
+<%= render 'layouts/navbar' %>
+<br>
 <main role="main" class="container">
-	<div class="my-3 p-3 bg-white rounded box-shadow">
-        <br>
-        <h3><i class="far fa-chart-bar"></i> Estadísticas</h3>
-        <br> 
-        <hr>
-        <h4>1. Tus contribuciones</h4>
-        <hr>
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Cantidad de proveedores creados</h5>
-                    <%= column_chart current_user.proveedors.group_by_day(:created_at).count %>
-                </div>
-                
-            </div>
+    <h2>Estadísticas</h2>
+    <hr>
+    <h4>1. Tus contribuciones</h4>
+    <hr>
+    <br>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-6">
+            <h5>Cantidad de proveedores creados</h5>
+            <%= column_chart current_user.proveedors.group_by_day(:created_at).count %>
         </div>
-        <br></br>
-        <hr>
-        <h4>2. Resultados a nivel empresa</h4>
-        <hr>
-        <br>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <h5>Creación de proveedores</h5>
-                    
-                    
-                </div>
-            </div>
+        </div>
+    </div>
+    <br></br>
+    <hr>
+    <h4>2. Resultados a nivel empresa</h4>
+    <hr>
+    <br>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-6">
+            <h5>Creación de proveedores</h5>
+        </div>
         </div>
     </div>
 </main>   

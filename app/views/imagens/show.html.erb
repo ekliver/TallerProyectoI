@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Urlimagen:</strong>
+  <%= @imagen.urlImagen %>
+</p>
+
+<p>
+  <strong>Urlimagenprevia:</strong>
+  <%= @imagen.urlImagenPrevia %>
+</p>
+
+<%= link_to 'Edit', edit_imagen_path(@imagen) %> |
+<%= link_to 'Back', imagens_path %>

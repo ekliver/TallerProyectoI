@@ -1,38 +1,8 @@
 <%= render 'layouts/navbar' %>
-
-  <div class="row">
-    
-
-  
-    <div class="col-8">
-    <% if !user_signed_in? %>
-  	<p class="sign_in"><%= link_to "Acceder aqui", new_user_session_path,  class: "btn btn-light" %></p>
-  	
-    <% end %>
-    </div>
-    
-    
-    <% if user_signed_in? %>
-    
-    <div class="col-1">
-        <%= link_to "Perfil", edit_user_registration_path,  class: "btn btn-light" %>
-    </div>
-    <div class="col-2">
-        <%= link_to "Estadisticas", dashboard_estadisticas_path,  class: "btn btn-light" %>
-    </div>
-    <div class="col-1">
-        <%= link_to "Salir", destroy_user_session_path, :method => :delete,  class: "btn btn-dark" %>
-    </div>
-    <% end %>
-    
-    
-  </div>
-  
-
-
-
-  <h1><i class="fas fa-car"></i> Empresas Proveedoras de Servicios Vehiculares</h1>
-  <div class="table-responsive">
+<br>
+<h2></i> Empresas Proveedoras de Servicios Vehiculares</h2>
+<br>
+<div class="table-responsive">
   <table class="table table-hover">
     <thead>
       <tr>

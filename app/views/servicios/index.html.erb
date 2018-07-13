@@ -1,0 +1,29 @@
+<%= render 'layouts/navbar' %>
+<br>
+<h2>Servicios</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nomservicio</th>
+      <th>Inactivo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @servicios.each do |servicio| %>
+      <tr>
+        <td><%= servicio.nomServicio %></td>
+        <td><%= servicio.inActivo %></td>
+        <td><%= link_to 'Show', servicio %></td>
+        <td><%= link_to 'Edit', edit_servicio_path(servicio) %></td>
+        <td><%= link_to 'Destroy', servicio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Servicio', new_servicio_path %>

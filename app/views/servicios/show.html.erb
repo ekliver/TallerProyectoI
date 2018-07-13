@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nomservicio:</strong>
+  <%= @servicio.nomServicio %>
+</p>
+
+<p>
+  <strong>Inactivo:</strong>
+  <%= @servicio.inActivo %>
+</p>
+
+<%= link_to 'Edit', edit_servicio_path(@servicio) %> |
+<%= link_to 'Back', servicios_path %>

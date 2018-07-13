@@ -1,14 +1,26 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand">
+    <%= image_tag("icon_mechanic.png", height: '50', width: '50') %>
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="collapse navbar-collapse" id="nav">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Features</a>
-      <a class="nav-item nav-link" href="#">Pricing</a>
-      <a class="nav-item nav-link disabled" href="#">Disabled</a>
+        <% if !user_signed_in? %>
+            <%= link_to "Acceder aqui", new_user_session_path,  class: "btn btn-light" %>
+        <% else %>
+            <%= link_to "Perfil", edit_user_registration_path,  class: "btn btn-light" %>
+            <%= link_to "Proveedores", proveedors_path,  class: "btn btn-light" %>
+            <%= link_to "Beneficio", beneficios_path,  class: "btn btn-light" %>
+            <%= link_to "Empresas", empresas_path,  class: "btn btn-light" %>
+            <%= link_to "Ejes", ejes_path,  class: "btn btn-light" %>
+            <%= link_to "Imagenes", imagens_path,  class: "btn btn-light" %>
+            <%= link_to "Locales", locals_path,  class: "btn btn-light" %>
+            <%= link_to "Servicios", servicios_path,  class: "btn btn-light" %>
+            <%= link_to "Estadisticas", dashboard_estadisticas_path,  class: "btn btn-light" %>
+            <%= link_to "Salir", destroy_user_session_path, :method => :delete,  class: "btn btn-light" %>
+        <% end %>
     </div>
   </div>
 </nav>

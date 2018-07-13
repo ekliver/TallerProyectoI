@@ -1,0 +1,52 @@
+<%= form_with(model: local, local: true) do |form| %>
+  <% if local.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(local.errors.count, "error") %> prohibited this local from being saved:</h2>
+
+      <ul>
+      <% local.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nomLocal %>
+    <%= form.text_field :nomLocal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numLatitud %>
+    <%= form.text_field :numLatitud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numLongitud %>
+    <%= form.text_field :numLongitud %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dirLocal %>
+    <%= form.text_field :dirLocal %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nomDistrito %>
+    <%= form.text_field :nomDistrito %>
+  </div>
+
+  <div class="field">
+    <%= form.label :numTelefono %>
+    <%= form.text_field :numTelefono %>
+  </div>
+
+  <div class="field">
+    <%= form.label :inAbierto %>
+    <%= form.text_field :inAbierto %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
