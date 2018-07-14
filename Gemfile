@@ -14,6 +14,9 @@ gem 'devise'
 gem 'bootstrap'
 gem 'jquery-rails'
 gem 'sqlite3'
+# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
+gem 'turbolinks'
+gem 'flexbox-rails', '~> 1.0'
 # gemas para graficos
 gem 'chartkick'
 gem 'groupdate'

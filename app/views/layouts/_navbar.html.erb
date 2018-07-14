@@ -1,26 +1,64 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  
   <a class="navbar-brand">
     <%= image_tag("icon_mechanic.png", height: '50', width: '50') %>
   </a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+  <a class="navbar-brand" href="#">SOS Mechanical</a>
+  
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="collapse navbar-collapse" id="nav">
-    <div class="navbar-nav">
+
+  <div class="collapse navbar-collapse" id="navbarText">
+    <div class="navbar navbar-dark bg-primary">
+   
+        <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+        <a class="nav-link" href="https://web-auxilio-mecanico-gbarzola1.c9users.io/">Home <span class="sr-only">(current)</span></a>
+      </li>
+
         <% if !user_signed_in? %>
-            <%= link_to "Acceder aqui", new_user_session_path,  class: "btn btn-light" %>
+        <li class="nav-item active">
+          <%= link_to "Acceder aqui", new_user_session_path, class:"nav-link"  %>
+        </li>
+            
         <% else %>
-            <%= link_to "Perfil", edit_user_registration_path,  class: "btn btn-light" %>
-            <%= link_to "Proveedores", proveedors_path,  class: "btn btn-light" %>
-            <%= link_to "Beneficio", beneficios_path,  class: "btn btn-light" %>
-            <%= link_to "Empresas", empresas_path,  class: "btn btn-light" %>
-            <%= link_to "Ejes", ejes_path,  class: "btn btn-light" %>
-            <%= link_to "Imagenes", imagens_path,  class: "btn btn-light" %>
-            <%= link_to "Locales", locals_path,  class: "btn btn-light" %>
-            <%= link_to "Servicios", servicios_path,  class: "btn btn-light" %>
-            <%= link_to "Estadisticas", dashboard_estadisticas_path,  class: "btn btn-light" %>
-            <%= link_to "Salir", destroy_user_session_path, :method => :delete,  class: "btn btn-light" %>
+        <li class="nav-item">
+            <%= link_to "Perfil", edit_user_registration_path, class:"nav-link"  %>
+              </li>
+      <li class="nav-item">
+            <%= link_to "Proveedores", proveedors_path, class:"nav-link"   %>
+              </li>
+      <li class="nav-item">
+            <%= link_to "Beneficio", beneficios_path, class:"nav-link"   %>
+              </li>
+      <li class="nav-item">
+            <%= link_to "Empresas", empresas_path, class:"nav-link"  %>
+              </li>
+      <li class="nav-item">
+            <%= link_to "Ejes", ejes_path, class:"nav-link"  %>
+              </li>
+      <li class="nav-item">
+            <%= link_to "Imagenes", imagens_path, class:"nav-link"   %>
+              </li>
+      <li class="nav-item">
+            <%= link_to "Locales", locals_path, class:"nav-link"   %>
+              </li>
+      <li class="nav-item">
+            <%= link_to "Servicios", servicios_path, class:"nav-link"   %>
+              </li>
+      <li class="nav-item">
+            <%= link_to "Estadisticas", dashboard_estadisticas_path, class:"nav-link"   %>
+              </li>
+      <li class="nav-item">
+            <%= link_to "Salir", destroy_user_session_path, :method => :delete, class:"nav-link"   %>
+              </li>
         <% end %>
-    </div>
+          </ul>
+    <span class="navbar-text">
+      Tu mejor opcion
+    </span>
+  </div>
+
   </div>
 </nav>

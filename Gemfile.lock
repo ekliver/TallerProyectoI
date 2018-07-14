@@ -74,6 +74,8 @@ GEM
     erubi (1.7.1)
     execjs (2.7.0)
     ffi (1.9.25)
+    flexbox-rails (1.1.0)
+      rails (>= 3.1)
     font-awesome-rails (4.7.0.4)
       railties (>= 3.2, < 6.0)
     globalid (0.4.1)
@@ -193,6 +195,7 @@ DEPENDENCIES
   chartkick
   coffee-rails
   devise
+  flexbox-rails (~> 1.0)
   font-awesome-rails
   groupdate
   jbuilder
