@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :usuarios
   resources :imagens
   resources :locals
   resources :servicios
@@ -7,11 +8,15 @@ Rails.application.routes.draw do
   resources :ejes
   resources :beneficios
   resources :proveedors
+  
+  
   devise_for :users
   root "proveedors#index"
 
+
   namespace :api do
     namespace :v1 do
+      resources :usuarios
       resources :users
       resources :proveedors
       resources :beneficios

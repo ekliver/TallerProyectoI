@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Logiusuario:</strong>
+  <%= @usuario.logiUsuario %>
+</p>
+
+<p>
+  <strong>Nomusuario:</strong>
+  <%= @usuario.nomUsuario %>
+</p>
+
+<p>
+  <strong>Correousuario:</strong>
+  <%= @usuario.correoUsuario %>
+</p>
+
+<p>
+  <strong>Apeusuario:</strong>
+  <%= @usuario.apeUsuario %>
+</p>
+
+<p>
+  <strong>Numdni:</strong>
+  <%= @usuario.numDni %>
+</p>
+
+<p>
+  <strong>Numcelular:</strong>
+  <%= @usuario.numCelular %>
+</p>
+
+<p>
+  <strong>Imgusuario:</strong>
+  <%= @usuario.imgUsuario %>
+</p>
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>

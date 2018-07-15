@@ -4,21 +4,21 @@ class Api::V1::EjesController < ApplicationController
     
     def index
         ejes = Eje.order("created_at DESC")
-        render json: {status: 'Exitoso', message: 'Lista de ejes', data: ejes}, status: :ok
+        render json: {status: 'Exitoso', message: 'Lista de usuarios', data: ejes}, status: :ok
     end
 
     def show
         eje = Eje.find(params[:id])
-        render json: {status: 'Exitoso', message: 'Eje encontrado', data: eje}, status: :ok
+        render json: {status: 'Exitoso', message: 'Usuario encontrado', data: eje}, status: :ok
     end
     
     def create
         eje = Eje.new(eje_params)
         
         if eje.save
-            render json: {status: 'Exitoso', message: 'Eje creado', data: eje}, status: :ok
+            render json: {status: 'Exitoso', message: 'User creado', data: eje}, status: :ok
         else
-            render json: {status: 'Error', message: 'No se grabo eje', data: eje.errors}, status: :unprocessable_entity
+            render json: {status: 'Error', message: 'No se grabo user', data: eje.errors}, status: :unprocessable_entity
         end
 
     end

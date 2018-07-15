@@ -1,17 +1,17 @@
-<%= render 'layouts/navbar' %>
+
 
 <br> 
 <h2>Empresas</h2>
-
-<table>
+<div class="table-responsive thead-dark">
+  <table class="table">
   <thead>
     <tr>
-      <th>Nomempresa</th>
-      <th>Desempresa</th>
-      <th>Urllogo</th>
-      <th>Numsoporte</th>
-      <th>Nomskype</th>
-      <th>Inclave</th>
+      <th>Nombre Empresa</th>
+      <th>Descripción</th>
+      <th>Url Logo</th>
+      <th>Número de Soporte</th>
+      <th>Nombre Skype</th>
+      <th>Clave</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -32,7 +32,7 @@
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
 <%= link_to 'New Empresa', new_empresa_path %>
