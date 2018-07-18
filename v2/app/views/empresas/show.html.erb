@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Empresa:</strong>
+  <%= @empresa.nomEmpresa %>
+</p>
+
+<p>
+  <strong>Descripción:</strong>
+  <%= @empresa.desEmpresa %>
+</p>
+
+<p>
+  <strong>Url logo:</strong>
+  <%= @empresa.urlLogo %>
+</p>
+
+<p>
+  <strong>Número Soporte:</strong>
+  <%= @empresa.numSoporte %>
+</p>
+
+<p>
+  <strong>Nombre Skype:</strong>
+  <%= @empresa.nomSkype %>
+</p>
+
+<p>
+  <strong>Clave:</strong>
+  <%= @empresa.inClave %>
+</p>
+
+<%= link_to 'Edit', edit_empresa_path(@empresa) %,class:"glyphicon glyphicon-pencil"> |
+<%= link_to 'Back', empresas_path %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nomlocal:</strong>
+  <%= @local.nomLocal %>
+</p>
+
+<p>
+  <strong>Numlatitud:</strong>
+  <%= @local.numLatitud %>
+</p>
+
+<p>
+  <strong>Numlongitud:</strong>
+  <%= @local.numLongitud %>
+</p>
+
+<p>
+  <strong>Dirlocal:</strong>
+  <%= @local.dirLocal %>
+</p>
+
+<p>
+  <strong>Nomdistrito:</strong>
+  <%= @local.nomDistrito %>
+</p>
+
+<p>
+  <strong>Numtelefono:</strong>
+  <%= @local.numTelefono %>
+</p>
+
+<p>
+  <strong>Inabierto:</strong>
+  <%= @local.inAbierto %>
+</p>
+
+<%= link_to 'Edit', edit_local_path(@local) %> |
+<%= link_to 'Back', locals_path %>

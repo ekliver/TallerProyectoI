@@ -1,0 +1,27 @@
+<%= form_with(model: imagen, local: true) do |form| %>
+  <% if imagen.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(imagen.errors.count, "error") %> prohibited this imagen from being saved:</h2>
+
+      <ul>
+      <% imagen.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :urlImagen %>
+    <%= form.text_field :urlImagen %>
+  </div>
+
+  <div class="field">
+    <%= form.label :urlImagenPrevia %>
+    <%= form.text_field :urlImagenPrevia %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

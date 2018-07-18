@@ -3,7 +3,8 @@
 
 <h2>Ejes</h2>
 
-<table>
+<div class="table-responsive">
+  <table class="table table-hover ">
   <thead>
     <tr>
       <th>Nombre de eje</th>
@@ -19,14 +20,17 @@
         <td><%= eje.nomEje %></td>
         <td><%= eje.imgEje %></td>
         <td><%= eje.iconEje %></td>
-        <td><%= link_to 'Show', eje %></td>
-        <td><%= link_to 'Edit', edit_eje_path(eje) %></td>
-        <td><%= link_to 'Destroy', eje, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+        <td><%= link_to '  Ver  ', eje, class: "btn btn-primary"  %></td>
+        <td><%= link_to ' Editar ', edit_eje_path(eje) , class: "btn btn-info" %></td>
+        <td><%= link_to 'Eliminar', eje, method: :delete, data: { confirm: 'Estas seguro?' } , class: "btn btn-danger" %></td>
+        <%end%>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
-
-<%= link_to 'New Eje', new_eje_path %>
+<% if user_signed_in? %>
+<%= link_to 'Nuevo Eje', new_eje_path , class: "btn btn-success"%>
+<%end%>

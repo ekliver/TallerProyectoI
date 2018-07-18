@@ -1,0 +1,48 @@
+<%= form_with(model: empresa, local: true) do |form| %>
+  <% if empresa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(empresa.errors.count, "error") %> prohibited this empresa from being saved:</h2>
+
+      <ul>
+      <% empresa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Empresa %>
+    <%= form.text_field :nomEmpresa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Descripción %>
+    <%= form.text_field :desEmpresa %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Logo %>
+    <%= form.text_field :urlLogo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :NumeroSoporte %>
+    <%= form.text_field :numSoporte %>
+  </div>
+
+  <div class="field">
+    
+    <%= form.label :NombreSkype %>
+    <%= form.text_field :nomSkype %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Clave %>
+    <%= form.text_field :inClave %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

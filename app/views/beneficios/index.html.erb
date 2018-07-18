@@ -2,7 +2,9 @@
 <br>
 <h2>Beneficios</h2>
 <br> 
-<table>
+
+<div class="table-responsive">
+  <table class="table table-hover ">
   <thead>
     <tr>
       <th>Nombre Beneficio</th>
@@ -44,14 +46,19 @@
         <td><%= beneficio.numLatitud %></td>
         <td><%= beneficio.numDistancia %></td>
         <td><%= beneficio.nomDistrito %></td>
-        <td><%= link_to 'Show', beneficio %></td>
-        <td><%= link_to 'Edit', edit_beneficio_path(beneficio) %></td>
-        <td><%= link_to 'Destroy', beneficio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+          <td><%= link_to '  Ver  ', beneficio, class: "btn btn-primary"  %></td>
+          <td><%= link_to ' Editar ', edit_beneficio_path(beneficio) , class: "btn btn-info" %></td>
+          <td><%= link_to 'Eliminar', beneficio, method: :delete, data: { confirm: 'Estas seguro?' } , class: "btn btn-danger" %></td>
+        <% end %>
+        
+        
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
-
-<%= link_to 'New Beneficio', new_beneficio_path %>
+<% if user_signed_in? %>
+<%= link_to 'Nuevo Beneficio', new_beneficio_path, class: "btn btn-success" %>
+<% end %>

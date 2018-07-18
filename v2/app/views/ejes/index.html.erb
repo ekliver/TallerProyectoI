@@ -1,0 +1,32 @@
+
+<br> 
+
+<h2>Ejes</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nombre de eje</th>
+      <th>Imagen de eje</th>
+      <th>Icono de eje</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ejes.each do |eje| %>
+      <tr>
+        <td><%= eje.nomEje %></td>
+        <td><%= eje.imgEje %></td>
+        <td><%= eje.iconEje %></td>
+        <td><%= link_to 'Show', eje %></td>
+        <td><%= link_to 'Edit', edit_eje_path(eje) %></td>
+        <td><%= link_to 'Destroy', eje, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Eje', new_eje_path %>

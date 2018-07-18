@@ -43,12 +43,12 @@
 
   <div class="field">
     <%= form.label :idEje %>
-    <%= form.number_field :idEje %>
+    <%= form.select(:idEje, [1,2,3,4], {}) %>
   </div>
-
+  
   <div class="field">
     <%= form.label :nomEje %>
-    <%= form.text_field :nomEje %>
+    <%= form.select(:nomEje, ["Grua","Gasolineria","LLanteria","Lubricenter"], {}) %>
   </div>
 
   <div class="field">
@@ -94,4 +94,5 @@
   <div class="actions">
     <%= form.submit %>
   </div>
+  
 <% end %>

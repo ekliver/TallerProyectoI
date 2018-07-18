@@ -1,0 +1,57 @@
+
+<br>
+<h2>Beneficios</h2>
+<br> 
+<table>
+  <thead>
+    <tr>
+      <th>Nombre Beneficio</th>
+      <th>Imagen</th>
+      <th>Punto Beneficio</th>
+      <th>Porc. Descuento</th>
+      <th>Favorito</th>
+      <th>ID favorito</th>
+      <th>Id Eje</th>
+      <th>Nombre Eje</th>
+      <th>Icono Eje</th>
+      <th>Icons Eje</th>
+      <th>Id Local</th>
+      <th>Abierto</th>
+      <th>Número Longitud</th>
+      <th>Número Latitud</th>
+      <th>Número Distancia</th>
+      <th>Nombre Distrito</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @beneficios.each do |beneficio| %>
+      <tr>
+        <td><%= beneficio.nomBeneficio %></td>
+        <td><%= beneficio.imgBeneficio %></td>
+        <td><%= beneficio.puntBeneficio %></td>
+        <td><%= beneficio.porcDescuento %></td>
+        <td><%= beneficio.inFavorito %></td>
+        <td><%= beneficio.idFavorito %></td>
+        <td><%= beneficio.idEje %></td>
+        <td><%= beneficio.nomEje %></td>
+        <td><%= beneficio.iconEje %></td>
+        <td><%= beneficio.iconSEje %></td>
+        <td><%= beneficio.idLocal %></td>
+        <td><%= beneficio.inAbierto %></td>
+        <td><%= beneficio.numLongitud %></td>
+        <td><%= beneficio.numLatitud %></td>
+        <td><%= beneficio.numDistancia %></td>
+        <td><%= beneficio.nomDistrito %></td>
+        <td><%= link_to 'Show', beneficio %></td>
+        <td><%= link_to 'Edit', edit_beneficio_path(beneficio) %></td>
+        <td><%= link_to 'Destroy', beneficio, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Beneficio', new_beneficio_path %>

@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   
   
   devise_for :users
-  root "proveedors#index"
+  root "beneficios#index"
 
 
   namespace :api do

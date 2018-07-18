@@ -1,0 +1,104 @@
+
+
+<%= form_with(model: proveedor, local: true) do |form| %>
+  <% if proveedor.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(proveedor.errors.count, "error") %> prohibited this proveedor from being saved:</h2>
+
+      <ul>
+      <% proveedor.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="field">
+    <%= form.label :razon_social %>
+    <%= form.text_field :razon_social , class:"form-control" %>
+  </div>
+
+  <div class="field">
+    <%= form.label :direccion %>
+    <%= form.text_field :direccion , class:"form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :distrito %>
+    <%= form.select(:distrito, ["Lince",'Surco','San Borja','San Isidro','San Miguel','Magdalena del Mar'], {}, class:"form-control") %>
+  </div>
+
+
+  <div class="field">
+    <%= form.label :provincia %>
+    <%= form.select(:provincia, ['Lima','Huaura','Oyon'], {}, class:"form-control") %>
+  </div>
+
+  <div class="field">
+    <%= form.label :departamento %>
+    <%= form.select(:departamento, ['Lima','Trujillo','Arequipa'], {}, class:"form-control") %>
+  </div>
+
+  <div class="field">
+    <%= form.label :telefono %>
+    <%= form.text_field :telefono , class:"form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :celular1 %>
+    <%= form.text_field :celular1 , class:"form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :celular2 %>
+    <%= form.text_field :celular2 , class:"form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :correo %>
+    <%= form.text_field :correo , class:"form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tipo_servicio %>
+    <%= form.select(:tipo_servicio, ['Mecanico','Grifo','Llantero','Servicios de autos','Servicios de autos', 'Gruas'], {}, class:"form-control") %>
+  </div>
+
+  <div class="field">
+    <%= form.label :latitud %>
+    <%= form.text_field :latitud , class:"form-control" , :id => 'latitud' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitud %>
+    <%= form.text_field :longitud , class:"form-control" , :id => 'longitud' %>
+  </div>
+  <br> 
+  Mapa
+  <br> 
+  <div id="map"></div>
+  <br>
+  <div class="field">
+    <%= form.label :url %>
+    <%= form.text_field :url , class:"form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora_inicio %>
+    <%= form.text_field :hora_inicio , class:"form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :hora_fin %>
+    <%= form.text_field :hora_fin , class:"form-control"  %>
+  </div>
+
+  <div class="field">
+    <%= form.label :foto_local %>
+    <%= form.text_field :foto_local , class:"form-control"  %>
+  </div>
+  <br>
+  <div class="actions">
+    <%= form.submit "Crear proveedor" , class: 'btn btn-success' %>
+  </div>
+<% end %>

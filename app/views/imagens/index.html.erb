@@ -1,8 +1,10 @@
 
 <br>
-<h2>Imagens</h2>
+<h2>Imagenes</h2>
 
-<table>
+<div class="table-responsive">
+  <table class="table table-hover ">
+
   <thead>
     <tr>
       <th>Url Imagen</th>
@@ -16,14 +18,17 @@
       <tr>
         <td><%= imagen.urlImagen %></td>
         <td><%= imagen.urlImagenPrevia %></td>
-        <td><%= link_to 'Show', imagen %></td>
-        <td><%= link_to 'Edit', edit_imagen_path(imagen) %></td>
-        <td><%= link_to 'Destroy', imagen, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        
+        <td><%= link_to 'Ver', imagen, class: "btn btn-primary"  %></td>
+        <td><%= link_to 'Editar', edit_imagen_path(imagen) , class: "btn btn-info" %></td>
+        <td><%= link_to 'Eliminar', imagen, method: :delete, data: { confirm: 'Estas seguro?' } , class: "btn btn-danger" %></td>
+        
+        
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
 
-<%= link_to 'New Imagen', new_imagen_path %>
+<%= link_to 'Nueva Imagen', new_imagen_path , class: "btn btn-success"%>

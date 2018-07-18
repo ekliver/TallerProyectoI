@@ -1,8 +1,9 @@
 
 <br> 
-<h2>Locals</h2>
+<h2>Locales</h2>
 
-<table>
+<div class="table-responsive">
+  <table class="table table-hover ">
   <thead>
     <tr>
       <th>Nombre Local</th>
@@ -26,14 +27,17 @@
         <td><%= local.nomDistrito %></td>
         <td><%= local.numTelefono %></td>
         <td><%= local.inAbierto %></td>
-        <td><%= link_to 'Show', local %></td>
-        <td><%= link_to 'Edit', edit_local_path(local) %></td>
-        <td><%= link_to 'Destroy', local, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if user_signed_in? %>
+        <td><%= link_to 'Ver', local, class: "btn btn-primary"  %></td>
+        <td><%= link_to 'Editar', edit_local_path(local) , class: "btn btn-info" %></td>
+        <td><%= link_to 'Eliminar', local, method: :delete, data: { confirm: 'Estas seguro?' } , class: "btn btn-danger" %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
-
+</div>
 <br>
-
-<%= link_to 'New Local', new_local_path %>
+<% if user_signed_in? %>
+<%= link_to 'Nuevo Local', new_local_path , class: "btn btn-success"%>
+<% end %>

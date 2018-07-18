@@ -1,0 +1,32 @@
+<%= form_with(model: eje, local: true) do |form| %>
+  <% if eje.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(eje.errors.count, "error") %> prohibited this eje from being saved:</h2>
+
+      <ul>
+      <% eje.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nomEje %>
+    <%= form.text_field :nomEje %>
+  </div>
+
+  <div class="field">
+    <%= form.label :imgEje %>
+    <%= form.text_field :imgEje %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iconEje %>
+    <%= form.text_field :iconEje %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
